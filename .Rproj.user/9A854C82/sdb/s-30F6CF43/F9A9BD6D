@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\nshinyUI(\n  pageWithSidebar(\n    #Application title\n    headerPanel(\"Use the app and win a lottery!\"),\n    \n      \n    sidebarPanel(\n        p(\"This model uses your date of birth to predict a lottery date.\"), \n        br(),\n        p(\"The lottery date is a function of randomly generated years added to your birthdate.\"),\n        br(),\n        br(),\n        br(),\n        p(\"Please enter your date of birth here:\"),\n        \n        dateInput(\"DOB\",\"\")      \n        \n    ),\n    \n      \n    mainPanel(\n        \n        h3('Results of Prediction'),\n        h4('You entered'),\n        verbatimTextOutput(\"inputValue\"),\n        h4(\"This model predicts you will be a millionaire on this date. Congratulations!\"),\n        verbatimTextOutput(\"prediction\")\n    )  \n      \n    \n  )\n)",
+    "created" : 1415748007949.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2523947679",
+    "id" : "F9A9BD6D",
+    "lastKnownWriteTime" : 1415750991,
+    "path" : "C:/Users/rohit/Desktop/Coursera Data Science Specialization/Developing Data Products/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

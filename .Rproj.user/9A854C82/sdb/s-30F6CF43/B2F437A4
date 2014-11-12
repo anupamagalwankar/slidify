@@ -1,0 +1,16 @@
+{
+    "contents" : "library(lubridate)\n\nlotteryDate=function(DOB) {\n    \n    yeardiff=year(today())-year(DOB)\n    ld=ymd(DOB)+years(round(runif(1,yeardiff+1,yeardiff+20),0))\n    \n    return(ld)\n}\n\nshinyServer(\n    function(input,output){\n      output$inputValue=renderPrint({input$DOB})\n      output$prediction=renderPrint({lotteryDate(input$DOB)})\n      \n      \n    }  \n    \n)\n    ",
+    "created" : 1415753404233.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2194659526",
+    "id" : "B2F437A4",
+    "lastKnownWriteTime" : 1415742747,
+    "path" : "C:/Users/rohit/Desktop/Coursera Data Science Specialization/Developing Data Products/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

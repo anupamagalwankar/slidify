@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : Developing Data Products\nsubtitle    : Course Project (slidify)\nauthor      : Anupama Galwankar \njob         : \nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n\n## Lottery Date Prediction\n\nThis app is a model that takes in your birthdate and predicts a date when you have good chances of winning the lottery.\n\n--- .class #id \n\n## Input and Output\n\n1: Inputs: Birthdate\n\n2: Output: Lottery Date\n\n3. Packages used: lubridate, shiny\n\n--- .class #id\n\n## Prediction formula\n\nScript ui.R takes the input and server.R calculates the lottery date.\n\n```{r opts.label=\"shiny\"}\n\nslidifyUI(\n      \n    sidebarPanel(\n        p(\"Please enter your date of birth here:\"),\n        \n        dateInput(\"DOB\",\"\")      \n        \n    ),\n    \n      \n    mainPanel(\n        \n        h3('Results of Prediction'),\n        h4('You entered'),\n        verbatimTextOutput(\"inputValue\"),\n        h4(\"This model predicts you will be a millionaire on this date. Congratulations!\"),\n        verbatimTextOutput(\"prediction\")\n    )  \n      \n    \n  \n)\n\n```\n\n--- .class #id\n\n\n##NEw\n\n```{r opts.label = 'shiny'}\nslidifyUI(\n  sidebarPanel(\n    selectInput('sex', 'Choose Sex', c('Male', 'Female')),\n    selectInput('type', 'Choose Type',\n      c('multiBarChart', 'multiBarHorizontalChart')\n    )\n  ),\n  mainPanel(\n    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')\n  )\n)\n```",
+    "created" : 1415752254408.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "701020111",
+    "id" : "897459F",
+    "lastKnownWriteTime" : 1415755257,
+    "path" : "C:/Users/rohit/Desktop/Coursera Data Science Specialization/Developing Data Products/Developing Data Products/index.Rmd",
+    "project_path" : "Developing Data Products/index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
